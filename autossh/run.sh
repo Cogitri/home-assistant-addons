@@ -24,7 +24,7 @@ fi
 if [ ! -d "$KEY_PATH" ]; then
   bashio::log.info "No previous key pair found"
   mkdir -p "$KEY_PATH"
-  ssh-keygen -b 4096 -t ed25519 -N "" -C "hassio-setup-via-autossh" -f "${KEY_PATH}/autossh_rsa_key"
+  ssh-keygen -b 4096 -N "" -C "hassio-setup-via-autossh" -f "${KEY_PATH}/autossh_rsa_key"
   bashio::log.info "The public key is:"
   cat "${KEY_PATH}/autossh_rsa_key.pub"
   bashio::log.warning "Add this key to '~/.ssh/authorized_keys' on your remote server now!"
