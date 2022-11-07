@@ -30,7 +30,7 @@ for folder in $FOLDERS; do
 
   local=$(echo "$folder" | jq -r '.source')
   remote=$(echo "$folder" | jq -r '.destination')
-  options=$(echo "$folder" | jq -r '.options // "--archive --compress --remove-source-files"')
+  options="--archive --compress --remove-source-files"
   bashio::log.info "Sync ${local} -> ${remote} with options \"${options}\""
   # shellcheck disable=SC2086
   rsync ${options} \
