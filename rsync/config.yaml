@@ -12,7 +12,6 @@ arch:
 homeassistant: 0.115.0
 boot: manual
 init: false
-image: ghcr.io/poeschl/ha-rsync-{arch}
 ports: {}
 ports_description: {}
 map:
