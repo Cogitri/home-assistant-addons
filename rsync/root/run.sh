@@ -1,7 +1,7 @@
 #!/usr/bin/env bashio
 # shellcheck shell=bash
 
-set -e
+set -ex
 
 PRIVATE_KEY_FILE=$(bashio::config 'private_key_file')
 if [ ! -f "$PRIVATE_KEY_FILE" ]; then
@@ -27,7 +27,7 @@ else
 fi
 
 for folder in $FOLDERS; do
-
+  echo $folder
   local=$(echo "$folder" | jq -r '.source')
   remote=$(echo "$folder" | jq -r '.destination')
   options="--archive --compress --remove-source-files"
