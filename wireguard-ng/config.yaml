@@ -1,5 +1,5 @@
 ---
-name: WireGuard
+name: WireGuard-NG
 version: dev
 slug: wireguard
 description: Fast, modern, secure VPN tunnel
