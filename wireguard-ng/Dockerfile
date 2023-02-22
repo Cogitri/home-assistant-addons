@@ -9,14 +9,14 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # hadolint ignore=DL3003
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        build-base=0.5-r2 \
-        git=2.36.1-r0 \
+        build-base \
+        git \
     \
     && apk add --no-cache \
-        go=1.18.2-r0 \
-        libqrencode=4.1.1-r0 \
-        openresolv=3.12.0-r0 \
-        wireguard-tools=1.0.20210914-r0 \
+        go \
+        libqrencode \
+        openresolv \
+        wireguard-tools \
     \
     && git clone --branch "0.0.20220316" --depth=1 \
         "https://git.zx2c4.com/wireguard-go" /tmp/wireguard \
