@@ -1,5 +1,5 @@
 name: Fritz!Box Cloudflare DynDNS
-version: 0.0.5
+version: 0.0.6
 slug: fritzbox-cloudflare-dyndns
 description: Slim WAN IP updater for AVM FRITZ!Box devices, pushing updates towards CloudFlare DNS using push and poll strategies.
 url: https://github.com/Cogitri/home-assistant-addons/tree/main/fritz-dyndns
