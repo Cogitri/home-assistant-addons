@@ -1,0 +1,30 @@
+name: Fritz dynDNS
+version: 0.0.1
+slug: fritz_dyndns
+description: Slim WAN IP updater for AVM FRITZ!Box devices, pushing updates towards CloudFlare DNS using push and poll strategies.
+url: https://github.com/Cogitri/home-assistant-addons/tree/main/fritz-dyndns
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+schema:
+  fritzbox_endpoint_url: str
+  fritzbox_endpoint_timeout: str
+  fritzbox_endpoint_interval: str
+  cloudflare_api_email: str
+  cloudflare_api_key: str
+  cloudflare_zones_ipv4:
+    - str
+  cloudflare_zones_ipv6:
+    - str
+  device_local_address_ipv6: str?
+options:
+  fritzbox_endpoint_url: http://fritz.box:49000
+  fritzbox_endpoint_timeout: 30s
+  fritzbox_endpoint_interval: 3s
+  cloudflare_api_email: mail@example.com
+  cloudflare_api_key: demo
+  cloudflare_zones_ipv4: ipv4.example.com
+  cloudflare_zones_ipv6: ipv6.example.com
