@@ -6,7 +6,7 @@ FROM golang:1.20-alpine as server_build
 RUN apk add --update gcc g++ git curl
 
 WORKDIR /appbuild
-RUN curl -L https://github.com/Cogitri/fritzbox-cloudflare-dyndns/archive/refs/tags/1.1.2.1.tar.gz | tar -xz --strip-components=1
+RUN curl -L https://github.com/Cogitri/fritzbox-cloudflare-dyndns/archive/refs/tags/1.1.2.2.tar.gz | tar -xz --strip-components=1
 
 RUN set -ex \
     && go version \
